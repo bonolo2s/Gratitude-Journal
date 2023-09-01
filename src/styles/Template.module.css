@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,100&family=Open+Sans:wght@300&family=Pacifico&family=Qwitcher+Grypen&display=swap');
+.wrapper{
+    background-color: rgb(147, 147, 224);
+    border: 1px solid black;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    width: 100%;
+    height: 100vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container{/*
+    background-color: aqua;*/
+    width: 80%;
+    margin: auto;/*
+    line-height: 2;*/
+    padding: 5%;/*
+    text-align: center;*/
+
+}
+.title{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;/*
+    background-color: blueviolet;*/
+}/*
+.dateContainer{
+    background-color: blue;
+}*/
+.logo{
+    width: 50px;
+}
+.LogoContainer{/*
+    background-color: bisque;*/
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+.textA{
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
+    border-radius: 10px;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin: 2% 0;
+}
+.subTitle{
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Qwitcher Grypen', cursive;
+    font-size: 3rem;/*
+    background-color: brown;*/
+    padding: 0px 0px 0px 60px;
+}
+.btn{
+    background-color: rgb(69, 127, 214);
+    border: 1px solid rgb(69, 127, 214);
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    font-size: 20px;/*
+    width: 200px;*/
+}
+.btn:hover{
+    background-color: rgb(22, 89, 189);
+}
+.linksContainer{
+    display: flex;
+    justify-content: space-between;
+}

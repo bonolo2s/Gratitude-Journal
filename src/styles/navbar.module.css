@@ -1,0 +1,28 @@
+.headerWrapper{
+    margin: 0 40px;
+}
+.header{/*
+    background-color: aqua;*/
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 40px 20px 40px;
+    border-radius: 10px;
+}
+.links{
+    color: aliceblue;/*
+    margin-right: 15px;*/
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    padding: 4px;
+    border: 1px solid aliceblue;
+    border-radius: 5px;
+}
+.links:hover{
+    background-color: rgb(54, 137, 214);
+    border: 1px solid rgb(0, 0, 0);
+    color: black;
+}
+.title{
+    color: aliceblue;
+}

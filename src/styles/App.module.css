@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,100&family=Open+Sans:wght@300&family=Qwitcher+Grypen&display=swap');
+.App{
+  position: relative;
+  background-image: url(../assets/Simple\ Calm\ Beach\ Gratitude\ Journal\ plain.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}  
+.content{
+  padding-top: 10px;
+  text-align: center;
+  line-height: 2;
+}
+.head{
+  font-size: 2rem;
+}
+h1{
+  color: rgb(184, 32, 90);
+  font-size: 3rem;
+}
+.sub{
+  color: rgb(184, 32, 90);
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Qwitcher Grypen', cursive;
+  font-size: 4rem;
+}
+.homeBtn{
+  background-image: linear-gradient(to right, rgb(116, 116, 192) 50%, rgb(53, 53, 105) 50%);
+  background-size: 200% 100%;
+  background-position: right;
+  border: 1px solid rgb(53, 53, 105);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: large;
+  color: white;
+  transition: all ease-in-out .5s;
+}
+
+.homeBtn:hover {
+  color: black;
+  background-position: left;
+}
