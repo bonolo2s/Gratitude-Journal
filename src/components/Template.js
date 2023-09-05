@@ -7,7 +7,6 @@ import Navbar from './Navbar';
 const Template = () => {
     return ( 
         <div className={styles.wrapper}>
-
             <div className={styles.container}>
                 <div className={styles.title} >
                     <div>
@@ -18,7 +17,7 @@ const Template = () => {
                         <h2 className={styles.subTitle}>Journal</h2>
                         </div>
                     <div className={styles.dateContainer}>
-                        <p>Date Picker</p>
+                        <input type="date" required className={styles.date}/>
                     </div>
                 </div>
                 <div>

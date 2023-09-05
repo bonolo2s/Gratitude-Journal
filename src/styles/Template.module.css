@@ -10,29 +10,30 @@
     flex-direction: column;
     justify-content: center;
 }
-.container{/*
-    background-color: aqua;*/
+.container{
     width: 80%;
-    margin: auto;/*
-    line-height: 2;*/
-    padding: 5%;/*
-    text-align: center;*/
-
+    margin: auto;
+    padding: 5%;
 }
 .title{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;/*
-    background-color: blueviolet;*/
-}/*
+    justify-content: space-between;
+}
 .dateContainer{
-    background-color: blue;
-}*/
+    margin: auto 0;
+}
+.date{
+    background-color:  rgb(22, 89, 189);
+    border: 2px solid rgb(69, 127, 214) ;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+}
 .logo{
     width: 50px;
 }
-.LogoContainer{/*
-    background-color: bisque;*/
+.LogoContainer{
     display: flex;
     justify-content: space-between;
     width: 200px;
@@ -51,8 +52,7 @@
     font-family: 'Open Sans', sans-serif;
     font-family: 'Pacifico', cursive;
     font-family: 'Qwitcher Grypen', cursive;
-    font-size: 3rem;/*
-    background-color: brown;*/
+    font-size: 3rem;
     padding: 0px 0px 0px 60px;
 }
 .btn{
@@ -62,8 +62,7 @@
     padding: 10px;
     cursor: pointer;
     transition: all 0.5s ease;
-    font-size: 20px;/*
-    width: 200px;*/
+    font-size: 20px;
 }
 .btn:hover{
     background-color: rgb(22, 89, 189);
