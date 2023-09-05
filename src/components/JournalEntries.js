@@ -16,8 +16,10 @@ const Entries = () => {
                 <h2 className={styles.header} >All Entries!</h2>
                 {Entries.map((Entries)=>(
                     <div className={styles.preview} key={Entries.id}>
-                        <div>{ Entries.Gratitude}</div>
-                        <div>{ Entries.Date}</div>
+                        <div>{ Entries.Gratitude}
+                            <div>{ Entries.Date}</div>
+                        </div>
+                        <div><button>Delete</button></div>
                     </div>
                 ))}
             </div>
