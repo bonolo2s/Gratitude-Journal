@@ -22,15 +22,15 @@ const Template = () => {
                 </div>
                 <div>
                     <h4>1. Things im grateful for: </h4>
-                    <textarea name="" id="" className={styles.textA}></textarea>
+                    <textarea name="" required className={styles.textA}></textarea>
                 </div>
                 <div>
                     <h4>2. Things im looking forward to: </h4>
-                    <textarea name="" id="" className={styles.textA} ></textarea>
+                    <textarea name="" required className={styles.textA} ></textarea>
                 </div>
                 <div>
                     <h4>3. Things i accomplished: </h4>
-                    <textarea name="" id="" className={styles.textA} ></textarea>
+                    <textarea name="" required className={styles.textA} ></textarea>
                 </div>
                 <div className={styles.linksContainer}>
                     <Link ><button className={styles.btn} >Add New Entry</button></Link>
