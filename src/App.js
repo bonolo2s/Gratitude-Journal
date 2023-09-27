@@ -3,6 +3,7 @@ import Login from './components/login';
 import SignUp from './components/Signup';
 import Template from './components/Template';
 import Entries from './components/JournalEntries';
+import Preview from './components/Preview'
 
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
@@ -30,6 +31,9 @@ function App() {
           </Route>
           <Route exact path="/Entries">
             <Entries/>
+          </Route>
+          <Route exact path="/Preview">
+            <Preview/>
           </Route>
         </Switch>
       </div>

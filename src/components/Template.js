@@ -2,40 +2,82 @@ import styles from '../styles/Template.module.css';
 import logo from '../assets/journalLogo.png';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
+import { useState } from 'react';
 
 
 const Template = () => {
+
+    const[date, setDate] = useState('');
+    const[gratitude, setGratitude] = useState('');
+    const[anticipation, setAnticipation] = useState('');
+    const[accomplishment, setAccomplishment] = useState('');
+
+    const handleSubmit = (e) =>{
+        //what does this block of code do
+        e.preventDefault();
+         const entry = {date, gratitude, anticipation, accomplishment};
+        
+        fetch('http://localhost:8000/entries' , {
+            method: 'POST',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(entry)
+            //JSON server will automatically add the ID as well for us..AND yep it worked.
+        }).then(() =>{
+            console.log('new blog added')
+        })
+    }
+    
+    
+
     return ( 
         <div className={styles.wrapper}>
             <div className={styles.container}>
-                <div className={styles.title} >
-                    <div>
-                        <div className={styles.LogoContainer} >
-                            <img src={logo} alt="Logo" className={styles.logo}/>
-                            <h2>GRATITUDE</h2>
+                <form onSubmit={handleSubmit}>
+                    <div className={styles.title} >
+                        <div>
+                            <div className={styles.LogoContainer} >
+                                <img src={logo} alt="Logo" className={styles.logo}/>
+                                <h2>GRATITUDE</h2>
+                            </div>
+                            <h2 className={styles.subTitle}>Journal</h2>
+                            </div>
+                        <div className={styles.dateContainer}>
+                            <input type="date" className={styles.date}
+                            required
+                            value={date}
+                            onChange={(e) => setDate(e.target.value)}
+                            />
                         </div>
-                        <h2 className={styles.subTitle}>Journal</h2>
-                        </div>
-                    <div className={styles.dateContainer}>
-                        <input type="date" required className={styles.date}/>
                     </div>
-                </div>
-                <div>
-                    <h4>1. Things im grateful for: </h4>
-                    <textarea name="" required className={styles.textA}></textarea>
-                </div>
-                <div>
-                    <h4>2. Things im looking forward to: </h4>
-                    <textarea name="" required className={styles.textA} ></textarea>
-                </div>
-                <div>
-                    <h4>3. Things i accomplished: </h4>
-                    <textarea name="" required className={styles.textA} ></textarea>
-                </div>
-                <div className={styles.linksContainer}>
-                    <Link ><button className={styles.btn} >Add New Entry</button></Link>
-                    <Link to='Entries' ><button className={styles.btn}>Home</button></Link>
-                </div>
+                    <label>
+                        <h4>1. Things im grateful for: </h4>
+                        <textarea className={styles.textA}
+                        required
+                        value={gratitude}
+                        onChange={(e) => setGratitude(e.target.value)}
+                        ></textarea>
+                    </label>
+                    <label>
+                        <h4>2. Things im looking forward to: </h4>
+                        <textarea className={styles.textA}
+                        required
+                        value={anticipation}
+                        onChange={(e) => setAnticipation(e.target.value)}
+                        ></textarea>
+                    </label>
+                    <label>
+                        <h4>3. Things i accomplished: </h4>
+                        <textarea className={styles.textA} 
+                        required
+                        value={accomplishment}
+                        onChange={(e) => setAccomplishment(e.target.value)}
+                        ></textarea>
+                    </label>
+                    <div className={styles.linksContainer}>
+                        <Link to='Entries' ><button className={styles.btn}>Home</button></Link>
+                        <button className={styles.btn} type='submit'>Add New Entry</button>
+                    </div>
+                </form>
             </div>
         </div>
      );
