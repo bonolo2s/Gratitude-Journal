@@ -9,21 +9,28 @@ const Entries = () => {
     const [selectedEntry, setSelectedEntry] = useState(null);
 
     useEffect(() =>{
-        fetch('http://localhost:8000/entries')
+        fetch('http://localhost:5000/entries')//updated code to tell BE to fetch data on render.
         .then(res =>{
+            if (!res.ok) { // Check if response is ok
+                throw Error('Could not fetch data');
+            }
             return res.json();
         })
         .then(data => {
             setEntries(data)
         })
-    }, []);
+        .catch(err => {
+            console.error(err)
+        });
+    }, [Entries]);
 
     const handleDelete = (id) =>{
-        fetch(`http://localhost:8000/entries/${id}`, {//``and $ actually solved my DataBase problem
+        console.log(id + "here is the ID nolo"); // Add this line
+        fetch(`http://localhost:5000/entries/${id}`, {//``and $ actually solved my DataBase problem
             method: 'DELETE',
         })
         .then(() =>{
-            setEntries(Entries.filter(item => item.id !== id));
+            setEntries(Entries.filter(item => item._id !== id));
         })
     }
 
@@ -36,7 +43,7 @@ const Entries = () => {
                 <h2 className={styles.Header}>Welcome Home😊</h2>
                 <h2 className={styles.header} >All Entries!</h2>
                 {Entries && Entries.map((entry)=>(
-                    <div className={styles.preview} key={entry.id}>
+                    <div className={styles.preview} key={entry._id}>
                         <Link className={styles.link} to={{                            
                             pathname: "Preview",
                             state: {detail: entry}}}
@@ -45,7 +52,7 @@ const Entries = () => {
                             <div>{ entry.date}</div>
                         </div>
                         </Link>
-                        <div><button onClick={() => handleDelete(entry.id)}>Delete</button></div>
+                        <div><button onClick={() => handleDelete(entry._id)}>Delete</button></div>
                     </div>
                 ))}
             </div>

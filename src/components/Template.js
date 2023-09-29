@@ -13,18 +13,20 @@ const Template = () => {
     const[accomplishment, setAccomplishment] = useState('');
 
     const handleSubmit = (e) =>{
-        //what does this block of code do
         e.preventDefault();
          const entry = {date, gratitude, anticipation, accomplishment};
         
-        fetch('http://localhost:8000/entries' , {
+        fetch('http://localhost:5000/entries' , {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(entry)
-            //JSON server will automatically add the ID as well for us..AND yep it worked.
-        }).then(() =>{
-            console.log('new blog added')
         })
+        .then(() =>{
+            console.log('new blog added, yey!')
+        })
+        .catch(err => {
+            console.error('Error:', err);
+        });
     }
     
     
