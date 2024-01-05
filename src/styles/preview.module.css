@@ -2,8 +2,8 @@
     background-color: rgb(147, 147, 224);
     border: 1px solid black;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-    width: 100%;
-    height: 100vh;
+    min-width: 100%;
+    max-height: 100vh;
     border-radius: 10px;/*
     display: flex;
     flex-direction: column;
@@ -29,3 +29,23 @@
 .TextAreaGrouping{
     margin: 10% 0;
 }
+
+/*MEDIA QUERRIES*/
+@media (max-width: 600px) {
+    .wrapper{
+      min-height: 95vh;
+      max-width: 95%;
+    }  
+  }
+  @media (min-width: 768px) {
+    .wrapper{
+      min-height: 95vh;
+      max-width: 95%;
+    }  
+  }
+  @media (min-width: 1025px) {
+    .wrapper{
+      min-height: 95vh;
+      max-width: 55%;
+    }  
+  }

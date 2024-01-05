@@ -6,8 +6,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
-  max-width: 600px;
+  min-height: 95vh;
+  max-width: 55%;
   margin: 20px auto;
   border-radius: 10px;
   display: flex;
@@ -48,4 +48,25 @@ h1{
 .homeBtn:hover {
   color: black;
   background-position: left;
+}
+
+
+/*MEDIA QUERRIES*/
+@media (max-width: 600px) {
+  .App{
+    min-height: 95vh;
+    max-width: 95%;
+  }  
+}
+@media (min-width: 768px) {
+  .App{
+    min-height: 95vh;
+    max-width: 95%;
+  }  
+}
+@media (min-width: 1025px) {
+  .App{
+    min-height: 95vh;
+    max-width: 55%;
+  }  
 }
