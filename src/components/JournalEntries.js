@@ -69,7 +69,7 @@ const Entries = () => {
                             state: {detail: entry}}}
                         >
                         <div>
-                            <p>Grateful for:{ entry.gratitude}</p>
+                            <p style={{fontWeight:'bold'}} >Grateful for: <span style={{fontWeight:'normal'}} >{ entry.gratitude}</span> </p>
                             <p>{ entry.date}</p>
                         </div>
                         </Link>
