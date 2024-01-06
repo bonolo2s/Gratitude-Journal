@@ -8,13 +8,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;*/
+    overflow-y: scroll;
     
 }
 .container{
     width: 80%;
     margin: 10% auto;
-    padding: 10px 6%;
-
+    padding: 5px 6%;
 }
 .title{
     font-size: 3rem;
@@ -27,15 +27,22 @@
     font-size: larger;
 }
 .TextAreaGrouping{
-    margin: 10% 0;
+    margin: 50px 0;
 }
 
 /*MEDIA QUERRIES*/
 @media (max-width: 600px) {
-    .wrapper{
-      min-height: 95vh;
-      max-width: 95%;
-    }  
+  .wrapper{
+    min-height: 95vh;
+    max-width: 95%;
+  }  
+  .title{
+    font-size: 1.5rem;
+  }
+  .container{
+    width: 80%;
+    margin: 5% auto;
+  }
   }
   @media (min-width: 768px) {
     .wrapper{

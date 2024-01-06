@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,100&family=Open+Sans:wght@300&family=Pacifico&family=Qwitcher+Grypen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Roboto+Mono:ital@1&display=swap');
 .wrapper{
     background-color: rgb(147, 147, 224);
     border: 1px solid black;
@@ -13,7 +14,7 @@
 .container{
     width: 80%;
     margin: auto;
-    padding: 5%;
+    padding: 3%;
 }
 .title{
     display: flex;
@@ -43,9 +44,12 @@
     border: 1px solid aliceblue;
     border-radius: 10px;
     width: 100%;
-    height: 100px;
-    padding: 10px;
+    height: 90px;
+    padding: 5px;
     margin: 2% 0;
+    font-size: 15px;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Roboto Mono', monospace;
 }
 .subTitle{
     font-family: 'DM Sans', sans-serif;
@@ -78,13 +82,22 @@
       min-height: 95vh;
       max-width: 95%;
     }  
+    .textA{
+        width: 100%;
+        height: 75px;
+        font-size: 13px;
+        padding: 5px;
+        margin: 1% 0;
+    }
   }
+
   @media (min-width: 768px) {
     .wrapper{
       min-height: 95vh;
       max-width: 95%;
     }  
   }
+
   @media (min-width: 1025px) {
     .wrapper{
       min-height: 95vh;

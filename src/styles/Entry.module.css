@@ -10,10 +10,12 @@
     flex-direction: column;/*
     justify-content: space-between;*/
 }
+a{
+  color: black;
+}
 
 .container{
-    width: 450px;/*
-    background-color: aqua;*/
+    width: 600px;
     margin: 20px auto;
     line-height: 2;
     padding: 5%;/*
@@ -38,6 +40,7 @@
     justify-content: space-between;
     box-shadow: 0px 10px 30px 3px rgba(0, 0, 0, 0.5);
     transition: 0.3s all ease;
+    width: 550px;
 }
 .preview:hover{
     box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.5);
@@ -53,17 +56,29 @@
 
 /*MEDIA QUERRIES*/
 @media (max-width: 600px) {
-    .wrapper{
-      min-height: 95vh;
-      max-width: 95%;
-    }  
+  .wrapper{
+    min-height: 95vh;
+    max-width: 95%;
+  }  
+  .container{
+    width: 95%;
+    margin: 20px 5px;
+    padding: 5px;
   }
+  .preview{
+    margin: 10px 5px;
+    padding: 5px;
+    width: 95%;
+  }
+  }
+
   @media (min-width: 768px) {
     .wrapper{
       min-height: 95vh;
       max-width: 95%;
     }  
   }
+
   @media (min-width: 1025px) {
     .wrapper{
       min-height: 95vh;

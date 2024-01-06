@@ -23,6 +23,7 @@ const Template = () => {
         })
         .then(() =>{
             console.log('new blog added, yey!')
+            alert("Entry added")
         })
         .catch(err => {
             console.error('Error:', err);

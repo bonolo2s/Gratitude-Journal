@@ -68,8 +68,9 @@ const Entries = () => {
                             pathname: "Preview",
                             state: {detail: entry}}}
                         >
-                        <div>Grateful for:{ entry.gratitude}
-                            <div>{ entry.date}</div>
+                        <div>
+                            <p>Grateful for:{ entry.gratitude}</p>
+                            <p>{ entry.date}</p>
                         </div>
                         </Link>
                         <div><button onClick={() => handleDelete(entry._id)}>Delete</button></div>
