@@ -8,6 +8,7 @@ const Entries = () => {
     const [Entries, setEntries]=useState(null);
     const [selectedEntry, setSelectedEntry] = useState(null);
     const [quote, setQuote] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
 
 
     useEffect(() =>{
@@ -20,42 +21,60 @@ const Entries = () => {
         })
         .then(data => {
             setEntries(data)
+            setIsLoading(false);
         })
         .catch(err => {
             console.error(err)
+            setIsLoading(false);
         });
     }, [Entries]);
 
-    useEffect(() => {
-        fetch('/api/quote/')
-            .then(res => {
+    //useEffect(() => {
+        //fetch('/api/quote/')
+            //.then(res => {
                 //console.log(res)
-                if (!res.ok) {
-                    throw Error(`HTTP error! status: ${res.status}`);
-                }
-                return res.json();
-            })
-            .then(data => {
-                console.log(data)
-                setQuote(data.quote); // Adjust this based on the API's response structure
-            })
-            .catch(err => {
-                console.error('An error occurred while fetching the quote:bonolo', err);
-            });
-    }, []);
+                //if (!res.ok) {
+                //    throw Error(`HTTP error! status: ${res.status}`);
+                //}
+                //return res.json();
+            //})
+            //.then(data => {
+                //console.log(data)
+                //setQuote(data.quote); // Adjust this based on the API's response structure
+            //})
+            //.catch(err => {
+                //console.error('An error occurred while fetching the quote:bonolo', err);
+            //});
+    //}, []);
 
     const handleDelete = (id) =>{
-        console.log(id + "here is the ID nolo"); // Add this line
+        console.log(id + "///here is the ID nolo"); // Add this line
         fetch(`http://localhost:5000/entries/${id}`, {//``and $ actually solved my DataBase problem
             method: 'DELETE',
+        })
+        .then(response => {
+            // Log the raw response
+            console.log('Raw response:', response);
+        
+            if (!response.ok) {
+                return response.text().then(error => {
+                    throw new Error(`Error during delete: ${error}`);
+                });
+            }
+            return response.json();
         })
         .then(() =>{
             setEntries(Entries.filter(item => item._id !== id));
         })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     }
 
-
-
+    if (isLoading) {
+        return <div style={{fontSize:'2rem',textAlign:'center'}} >Loading...</div>;
+    }
+    
     return ( 
         <div className={styles.wrapper}>
             <Navbar/>
@@ -68,12 +87,12 @@ const Entries = () => {
                             pathname: "Preview",
                             state: {detail: entry}}}
                         >
-                        <div>
+                        <div className={styles.previewText} >
                             <p style={{fontWeight:'bold'}} >Grateful for: <span style={{fontWeight:'normal'}} >{ entry.gratitude}</span> </p>
-                            <p>{ entry.date}</p>
+                            <p style={{fontWeight:'bold'}} >{ entry.date}</p>
                         </div>
                         </Link>
-                        <div><button onClick={() => handleDelete(entry._id)}>Delete</button></div>
+                        <div className={styles.previewBtn} ><button onClick={() => handleDelete(entry._id)} style={{padding:'2px', borderRadius:'5px', border:'none', cursor:'pointer'}}  >Delete</button></div>
                     </div>
                 ))}
             </div>
