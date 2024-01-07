@@ -6,6 +6,7 @@ import Entries from './components/JournalEntries';
 import Preview from './components/Preview'
 
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import Update from './components/Update';
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
           <Route exact path="/Preview">
             <Preview/>
           </Route>
+          <Router exact path="/Update" >
+            <Update/>
+          </Router>
         </Switch>
       </div>
     </Router>

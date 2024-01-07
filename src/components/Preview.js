@@ -1,6 +1,7 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation} from 'react-router-dom';
 import styles from '../styles/preview.module.css';
 import Navbar from './Navbar';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 const Preview = () => {
@@ -25,6 +26,14 @@ const Preview = () => {
                         <p className={styles.title}>Accomplishments</p>
                         <p className={styles.textarea}>{entry.accomplishment}</p>
                     </div>
+                </div>
+                <div>
+                    <Link to={{                            
+                        pathname: "Update",
+                        state: {detail: entry}}}
+                    >
+                        <button className={styles.btn}>Edit</button>
+                    </Link>
                 </div>
             </div>
 

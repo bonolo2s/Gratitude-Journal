@@ -85,7 +85,7 @@ const Entries = () => {
                     <div className={styles.preview} key={entry._id}>
                         <Link className={styles.link} to={{                            
                             pathname: "Preview",
-                            state: {detail: entry}}}
+                            state: {detail: entry}}}// here we are telling Link to carry our data obj from 1 comp to another..just like with params on URLs
                         >
                         <div className={styles.previewText} >
                             <p style={{fontWeight:'bold'}} >Grateful for: <span style={{fontWeight:'normal'}} >{ entry.gratitude}</span> </p>

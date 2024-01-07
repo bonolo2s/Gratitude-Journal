@@ -1,0 +1,106 @@
+.wrapper{
+    background-color: rgb(147, 147, 224);
+    border: 1px solid black;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    min-width: 100%;
+    min-height: 100vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    padding: 3%;
+}
+.title{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.dateContainer{
+    margin: auto 0;
+}
+.date{
+    background-color:  rgb(22, 89, 189);
+    border: 2px solid rgb(69, 127, 214) ;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+}
+.logo{
+    width: 50px;
+}
+.LogoContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+.textA{
+    background-color: aliceblue;
+    border: 1px solid aliceblue;
+    border-radius: 10px;
+    width: 100%;
+    height: 90px;
+    padding: 5px;
+    margin: 2% 0;
+    font-size: 15px;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+.subTitle{
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Qwitcher Grypen', cursive;
+    font-size: 3rem;
+    padding: 0px 0px 0px 60px;
+}
+.btn{
+    background-color: rgb(69, 127, 214);
+    border: 1px solid rgb(69, 127, 214);
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    font-size: 20px;
+}
+.btn:hover{
+    background-color: rgb(22, 89, 189);
+}
+.linksContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/*MEDIA QUERRIES*/
+@media (max-width: 600px) {
+    .wrapper{
+      min-height: 95vh;
+      max-width: 95%;
+    }  
+    .textA{
+        width: 100%;
+        height: 75px;
+        font-size: 13px;
+        padding: 5px;
+        margin: 1% 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .wrapper{
+      min-height: 95vh;
+      max-width: 95%;
+    }  
+  }
+
+  @media (min-width: 1025px) {
+    .wrapper{
+      min-height: 95vh;
+      max-width: 55%;
+    }  
+  }
