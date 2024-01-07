@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from '../styles/Entry.module.css'
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import moment from 'moment';
 
 
 const Entries = () => {
@@ -89,7 +90,7 @@ const Entries = () => {
                         >
                         <div className={styles.previewText} >
                             <p style={{fontWeight:'bold'}} >Grateful for: <span style={{fontWeight:'normal'}} >{ entry.gratitude}</span> </p>
-                            <p style={{fontWeight:'bold'}} >{ entry.date}</p>
+                            <p style={{fontWeight:'bold'}} >{moment(entry.date).format('YYYY-MM-DD')}</p>
                         </div>
                         </Link>
                         <div className={styles.previewBtn} ><button onClick={() => handleDelete(entry._id)} style={{padding:'2px', borderRadius:'5px', border:'none', cursor:'pointer'}}  >Delete</button></div>

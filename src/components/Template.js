@@ -3,6 +3,7 @@ import logo from '../assets/journalLogo.png';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 
 const Template = () => {
@@ -11,6 +12,8 @@ const Template = () => {
     const[gratitude, setGratitude] = useState('');
     const[anticipation, setAnticipation] = useState('');
     const[accomplishment, setAccomplishment] = useState('');
+
+    const history = useHistory();
 
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -28,6 +31,8 @@ const Template = () => {
         .catch(err => {
             console.error('Error:', err);
         });
+
+        history.goBack()
     }
     
     
