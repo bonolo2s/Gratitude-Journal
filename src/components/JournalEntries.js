@@ -30,23 +30,6 @@ const Entries = () => {
         });
     }, [Entries]);
 
-    //useEffect(() => {
-        //fetch('/api/quote/')
-            //.then(res => {
-                //console.log(res)
-                //if (!res.ok) {
-                //    throw Error(`HTTP error! status: ${res.status}`);
-                //}
-                //return res.json();
-            //})
-            //.then(data => {
-                //console.log(data)
-                //setQuote(data.quote); // Adjust this based on the API's response structure
-            //})
-            //.catch(err => {
-                //console.error('An error occurred while fetching the quote:bonolo', err);
-            //});
-    //}, []);
 
     const handleDelete = (id) =>{
         console.log(id + "///here is the ID nolo"); // Add this line
@@ -96,9 +79,6 @@ const Entries = () => {
                         <div className={styles.previewBtn} ><button onClick={() => handleDelete(entry._id)} style={{padding:'2px', borderRadius:'5px', border:'none', cursor:'pointer'}}  >Delete</button></div>
                     </div>
                 ))}
-            </div>
-            <div className={styles.api}>
-                {quote && <p>{quote}</p>}
             </div>
                 
         </div>

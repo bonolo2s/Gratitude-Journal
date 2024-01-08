@@ -32,7 +32,7 @@ const Template = () => {
             console.error('Error:', err);
         });
 
-        history.goBack()
+        history.push('/Entries')
     }
     
     
