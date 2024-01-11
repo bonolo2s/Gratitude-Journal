@@ -19,7 +19,7 @@ const Template = () => {
         e.preventDefault();
          const entry = {date, gratitude, anticipation, accomplishment};
         
-        fetch('http://170.64.177.128:5000/entries' , {
+        fetch('https://170.64.177.128:5000/entries' , {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(entry)
