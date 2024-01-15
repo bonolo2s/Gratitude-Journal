@@ -22,7 +22,7 @@ const Update = () => {
 
     // Fetch entry data from the server on initial render
     useEffect(() => {
-        fetch(`http://localhost:5000/entries/${entryId}`)
+        fetch(`http://170.64.177.128/entries/${entryId}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -49,7 +49,7 @@ const Update = () => {
             anticipation,
             accomplishment
         };
-        fetch(`http://localhost:5000/entries/${entryId}`, {
+        fetch(`http://170.64.177.128/entries/${entryId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
