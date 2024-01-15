@@ -13,7 +13,7 @@ const Entries = () => {
 
 
     useEffect(() =>{
-        fetch('https://170.64.177.128:5000/entries')//updated code to tell BE to fetch data on render.
+        fetch('http://localhost:5000/entries')//updated code to tell BE to fetch data on render.
         .then(res =>{
             if (!res.ok) { // Check if response is ok
                 throw Error('Could not fetch data');
@@ -33,7 +33,7 @@ const Entries = () => {
 
     const handleDelete = (id) =>{
         console.log(id + "///here is the ID nolo"); // Add this line
-        fetch(`https://170.64.177.128:5000/entries/${id}`, {//``and $ actually solved my DataBase problem
+        fetch(`http://localhost:5000/entries/${id}`, {//``and $ actually solved my DataBase problem
             method: 'DELETE',
         })
         .then(response => {
