@@ -34,7 +34,15 @@ Once the server is running, you can access the application in your web browser a
 cloned the backend code.
 
 ## Contribution
-Contributions are welcome! Please read the contribution guidelines before getting started.
+## Contribution
+Contributions are welcome! If you're interested in contributing, here are some guidelines:
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Make your changes in your branch.
+4. Submit a pull request.
+
+Please ensure your code adheres to the existing style for consistency.
+
 
 ## Contact Info
 WhatsApp: 0727525285
