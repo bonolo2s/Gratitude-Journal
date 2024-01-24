@@ -24,7 +24,7 @@ Here are the key features of this project:
 5. **CRUD Operations**: Users can journal about their gratitudes, anticipations and accomplishments.
 
 ## Quick Start
-1. Clone the repository: `https://github.com/yourusername/Gratitude-Journal-FrontEnd.git`
+1. Clone the repository: `https://github.com/bonolo2s/Gratitude-Journal.git`
 2. Navigate to the project directory: `cd Gratitude-Journal-FrontEnd`
 3. Install dependencies: `npm install`
 4. Start the server: `npm start`
